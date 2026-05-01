@@ -1,0 +1,76 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace TripleTriad
+{
+    /// <summary>
+    /// Interaction logic for PlayerControl.xaml
+    /// </summary>
+    public partial class PlayerControl : UserControl
+    {
+        public Player Player { get; set; }
+        public PlayerControl(Player player, int playerNum)
+        {
+            InitializeComponent();
+
+            Player = player;
+            int leftOffset = 50;
+            int topOffset = 0;
+            foreach (Card card in player.Hand)
+            {
+                if (leftOffset >= 300)
+                {
+                    leftOffset = 50;
+                    topOffset += 110;
+                }
+
+                CardControl cardControl = new CardControl(card);
+                Canvas.SetLeft(cardControl, leftOffset);
+                Canvas.SetTop(cardControl, topOffset);
+                HandCanvas.Children.Add(cardControl);
+                leftOffset += 110;
+
+
+                if (playerNum == 0)
+                {
+                    player.PlayerColor = Player.Color.Blue;
+                }
+                else
+                {
+                    player.PlayerColor = Player.Color.Red;
+                }
+            }
+
+        }
+
+        //Changes owner of a card
+        public void FlipOwner(Board board, CardControl c, Player player2)
+        {
+            Card card = c.Card;
+
+            Player.Hand.Remove(card);
+            player2.Hand.Add(card);
+
+            //if (Player.PlayerColor == Player.Color.Blue)
+            //{
+            //    card.CardColor = Player.Color.Red;
+            //}
+            //else
+            //{
+            //    card.CardColor = Player.Color.Blue;
+            //}
+
+            c.FlipCard();
+        }
+}
+}
