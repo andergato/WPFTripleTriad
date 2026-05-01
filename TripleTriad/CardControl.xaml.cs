@@ -55,19 +55,5 @@ namespace TripleTriad
                 DragCard.Fill = Brushes.Blue;
             }
         }
-
-        //Flips a card's owner based on the card's previous owner
-        //public void FlipOwner()
-        //{
-        //    if (Card.Owner.PlayerColor == Player.Color.Red)
-        //    {
-        //        Card.Owner.PlayerColor = Player.Color.Red;
-        //    }
-        //    else
-        //    {
-        //        Card.Owner.PlayerColor = Player.Color.Blue;
-        //    }
-
-        //}
     }
 }

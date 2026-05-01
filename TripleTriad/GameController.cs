@@ -29,8 +29,8 @@ namespace TripleTriad
         public GameController()
         {
             board = new Board();
-            player1 = new Player();
-            player2 = new Player();
+            player1 = new Player(Player.Color.Blue);
+            player2 = new Player(Player.Color.Red);
 
             LoadCards(player1);
             LoadCards(player2);
@@ -43,21 +43,13 @@ namespace TripleTriad
             {
                 Card card1 = new Card("Chocabo", 20, 2, 3, 4, p);
                 addToHand(p, card1);
-                addToHand(p, card1);
-                addToHand(p, card1);
-                addToHand(p, card1);
-                addToHand(p, card1);
-                addToHand(p, card1);
+
             }
             else
             {
                 Card card1 = new Card("Black Mage", 5, 10, 3, 6, p);
                 addToHand(p, card1);
-                addToHand(p, card1);
-                addToHand(p, card1);
-                addToHand(p, card1);
-                addToHand(p, card1);
-                addToHand(p, card1);
+
             }
         }
 
@@ -101,21 +93,21 @@ namespace TripleTriad
                 cardFlipped = leftAdj;
             }
 
-            if ((rightAdj is not null) && (rightAdj.Left > card.Right))
+            if ((rightAdj is not null) && (rightAdj.Left < card.Right))
             {
                 card.FlipOwner(card.Owner, rightAdj.Owner);
                 cardFlipped = rightAdj;
             }
 
-            if ((bottomAdj is not null) && (bottomAdj.Top > card.Bottom))
+            if ((bottomAdj is not null) && (bottomAdj.Top < card.Bottom))
             {
                 card.FlipOwner(card.Owner, bottomAdj.Owner);
                 cardFlipped = bottomAdj;
             }
 
-            if ((topAdj is not null) && (topAdj.Bottom > card.Top))
+            if ((topAdj is not null) && (topAdj.Bottom < card.Top))
             {
-                card.FlipOwner(card.Owner, topAdj.Owner);
+                topAdj.Owner = topAdj.FlipOwner(card.Owner, topAdj.Owner);
                 cardFlipped = topAdj;
             }
 

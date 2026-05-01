@@ -11,13 +11,13 @@ namespace TripleTriad
             Red,
             Blue
         }
-        public static Player create()
-        {
-            return new Player();
-        }
-
         public List<Card> Hand { get; set; } = new List<Card>();
-        public List<Card> Claimed { get; set; } = new List<Card>();
-        public Color PlayerColor { get; set; }
+
+        public Player.Color PlayerColor { get; set; }
+
+        public Player(Player.Color pc)
+        {
+            PlayerColor = pc;
+        }       
     }
 }

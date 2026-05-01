@@ -17,10 +17,10 @@ namespace TripleTriad
         public int Right { get; private set; }
         public string Name { get; private set; }
         //public Player.Color CardColor { get;  set; }
-        public Player Owner { get; private set; }
+        public Player Owner { get; set; }
         public Card(string name, int top, int bottom, int left, int right, Player owner)
         {
-            this.name = name;
+            Name = name;
             Top = top;
             Bottom = bottom;
             Left = left;
@@ -29,9 +29,10 @@ namespace TripleTriad
             //CardColor = cardcolor;
         }
 
-        public void FlipOwner(Player p1, Player p2)
+        public Player FlipOwner(Player p1, Player p2)
         {
             Owner = Owner == p1 ? p2 : p1;
+            return Owner;
         }
     }
 }

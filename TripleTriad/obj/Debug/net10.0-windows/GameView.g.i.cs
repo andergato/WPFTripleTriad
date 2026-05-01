@@ -61,7 +61,7 @@ namespace TripleTriad {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/TripleTriad;V1.0.0.0;component/gameview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/TripleTriad;component/gameview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\GameView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

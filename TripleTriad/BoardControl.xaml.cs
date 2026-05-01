@@ -88,10 +88,5 @@ namespace TripleTriad
             droppedCard.Width = 90;
             droppedCard.Height = 90;
         }
-
-        //private void CheckFull(Board board)
-        //{
-        //    for(int i = 0; )
-        //}
     }
 }

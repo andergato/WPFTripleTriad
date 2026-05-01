@@ -35,14 +35,17 @@ namespace TripleTriad
         private void LoadGame()
         {
             loadCards(_gameController.player1);
-            PlayerControl p1c = new PlayerControl(_gameController.player1, 0);
-
-            BoardControl bc = new BoardControl(_gameController.board, _gameController);
-            bc.CardDropped += (card, row, col) => _gameController.PlayCard(row, col, card);
-
             loadCards(_gameController.player2);
-            PlayerControl p2c = new PlayerControl(_gameController.player2, 1);
 
+            PlayerControl p1c = new PlayerControl(_gameController.player1, 0, cardDict);
+            PlayerControl p2c = new PlayerControl(_gameController.player2, 1, cardDict);
+            BoardControl bc = new BoardControl(_gameController.board, _gameController);
+
+            _gameController.CardFlipped += (card) =>
+            {
+                if (card != null && cardDict.ContainsKey(card))
+                    cardDict[card].FlipCard();
+            };
 
             Grid.SetColumn(p1c, 0);
             Grid.SetColumn(bc, 1);
@@ -63,4 +66,3 @@ namespace TripleTriad
         }
     }
 }
-

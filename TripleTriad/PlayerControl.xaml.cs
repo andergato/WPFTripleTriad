@@ -19,13 +19,14 @@ namespace TripleTriad
     public partial class PlayerControl : UserControl
     {
         public Player Player { get; set; }
-        public PlayerControl(Player player, int playerNum)
+        public PlayerControl(Player player, int playerNum, Dictionary<Card, CardControl> cardDict)
         {
             InitializeComponent();
 
             Player = player;
             int leftOffset = 50;
             int topOffset = 0;
+
             foreach (Card card in player.Hand)
             {
                 if (leftOffset >= 300)
@@ -34,7 +35,7 @@ namespace TripleTriad
                     topOffset += 110;
                 }
 
-                CardControl cardControl = new CardControl(card);
+                CardControl cardControl = cardDict[card];
                 Canvas.SetLeft(cardControl, leftOffset);
                 Canvas.SetTop(cardControl, topOffset);
                 HandCanvas.Children.Add(cardControl);
@@ -60,15 +61,6 @@ namespace TripleTriad
 
             Player.Hand.Remove(card);
             player2.Hand.Add(card);
-
-            //if (Player.PlayerColor == Player.Color.Blue)
-            //{
-            //    card.CardColor = Player.Color.Red;
-            //}
-            //else
-            //{
-            //    card.CardColor = Player.Color.Blue;
-            //}
 
             c.FlipCard();
         }
