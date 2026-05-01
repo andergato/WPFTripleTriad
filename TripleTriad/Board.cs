@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Imaging.Effects;
 using System.Text;
 
 namespace TripleTriad
@@ -44,6 +46,27 @@ namespace TripleTriad
                 }
             }
             return true;
+        }
+
+        public Player.Color CheckWinner()
+        {
+            int blue = 0;
+            int red = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if (cells[i, j].Owner.PlayerColor == Player.Color.Blue)
+                    {
+                        blue++;
+                    }
+                    else
+                    {
+                        red++;
+                    }
+                }
+            }
+            return blue > red ? Player.Color.Blue : Player.Color.Red;
         }
     }
 }

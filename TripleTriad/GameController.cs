@@ -59,7 +59,7 @@ namespace TripleTriad
             p.Hand.Add(c);
         }
 
-        //Need to move to GameController because need to access players that own cards? 
+        
         public void PlayCard(int row, int col, Card droppedCard)
         {
             Card? topAdj = null;

@@ -26,7 +26,6 @@ namespace TripleTriad
             Left = left;
             Right = right;
             Owner = owner;
-            //CardColor = cardcolor;
         }
 
         public Player FlipOwner(Player p1, Player p2)

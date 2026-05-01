@@ -57,7 +57,8 @@ namespace TripleTriad
             CardDropped?.Invoke(droppedCard.Card, row, col);
             if (Board.CheckFull())
             {
-                System.Windows.Application.Current.Shutdown();
+                Board.CheckWinner();
+                //Add winnerscreen functionality
             }
         }
 
