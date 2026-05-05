@@ -35,7 +35,7 @@ namespace TripleTriad
             if (targetBorder == null || targetBorder.Child != null) return;
 
             //// Check the payload is actually a card
-            if ((CardControl)e.Data.GetData(typeof(CardControl)) is not CardControl droppedCard) return;
+            if ((CardControl)e.Data.GetData(typeof(CardControl)) is not CardControl droppedCard || !_GameController.checkTurn(droppedCard.Card.Owner)) return;
 
             // Remove circle from its current parent
             RemoveFromParent(droppedCard);
