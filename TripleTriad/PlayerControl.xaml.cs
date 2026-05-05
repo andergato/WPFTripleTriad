@@ -27,6 +27,7 @@ namespace TripleTriad
             int leftOffset = 50;
             int topOffset = 0;
 
+            //Sets up UI for each players hand and sets up card control
             foreach (Card card in player.Hand)
             {
                 if (leftOffset >= 300)

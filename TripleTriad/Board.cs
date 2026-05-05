@@ -35,38 +35,17 @@ namespace TripleTriad
         public bool CheckFull()
         {
             //int flag = 0;
-            for(int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++)
             {
-                for(int j = 0; j < 3; j++)
+                for (int j = 0; j < 3; j++)
                 {
-                    if (cells[i,j] == null)
+                    if (cells[i, j] == null)
                     {
                         return false;
                     }
                 }
             }
             return true;
-        }
-
-        public Player.Color CheckWinner()
-        {
-            int blue = 0;
-            int red = 0;
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    if (cells[i, j].Owner.PlayerColor == Player.Color.Blue)
-                    {
-                        blue++;
-                    }
-                    else
-                    {
-                        red++;
-                    }
-                }
-            }
-            return blue > red ? Player.Color.Blue : Player.Color.Red;
         }
     }
 }

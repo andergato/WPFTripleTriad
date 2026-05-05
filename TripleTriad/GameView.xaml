@@ -19,7 +19,21 @@
         </Grid.ColumnDefinitions>
 
         <!-- Draggable piece lives here, to the left -->
-
+        <Grid x:Name="WinOverlay" Visibility="Collapsed">
+            <Grid.Background>
+                <SolidColorBrush Color="pink" Opacity="0.5" />
+            </Grid.Background>
+        <Border Width="300" Height="200"
+                HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border.Background>
+                    <SolidColorBrush Color="white" Opacity="0.5" />
+                </Border.Background>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock x:Name="WinnerText" FontSize="24" HorizontalAlignment="Center"/>
+                <Button Content="Play Again" Click="PlayAgain_Click" Margin="0,20,0,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
     </Grid>
 
 </UserControl>

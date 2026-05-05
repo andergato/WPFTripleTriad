@@ -21,6 +21,7 @@ namespace TripleTriad
         public event Action<Card, int, int> CardDropped;
         public Board Board { get; }
         public GameController _GameController;
+
         public BoardControl(Board board, GameController gc)
         {
             InitializeComponent();
@@ -55,14 +56,11 @@ namespace TripleTriad
             _GameController.PlayCard(row, col, droppedCard.Card);
 
             CardDropped?.Invoke(droppedCard.Card, row, col);
-            if (Board.CheckFull())
-            {
-                Board.CheckWinner();
-                //Add winnerscreen functionality
-            }
+
+            _GameController.CheckWinner();
         }
 
-        //Remove card from hand
+        //UI logic to remove card from hand
         private void RemoveFromParent(UIElement element)
         {
             var parent = LogicalTreeHelper.GetParent(element);
@@ -78,9 +76,9 @@ namespace TripleTriad
             }
         }
 
+        //Clears previous formatting and centers card inside new borders
         private void clearValues(CardControl droppedCard)
         {
-            // Clear previous values and center it inside the target border
             droppedCard.ClearValue(Canvas.LeftProperty);
             droppedCard.ClearValue(Canvas.TopProperty);
             droppedCard.ClearValue(MarginProperty);

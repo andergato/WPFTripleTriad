@@ -26,8 +26,8 @@ namespace TripleTriad
             
         }
 
-        // MenuView.xaml.cs
-        private void StartGame_Click(object sender, RoutedEventArgs e)
+        // Starts game
+        public void StartGame_Click(object sender, RoutedEventArgs e)
         {
             // Access the MainWindow and change its content to the GameView
             var mainWindow = (MainWindow)Application.Current.MainWindow;
@@ -35,6 +35,7 @@ namespace TripleTriad
             mainWindow.MainContent.Content = new GameView();
         }
 
+        //Closes game
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             CancelEventArgs c = new CancelEventArgs();

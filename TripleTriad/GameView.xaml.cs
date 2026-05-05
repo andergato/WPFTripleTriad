@@ -47,6 +47,12 @@ namespace TripleTriad
                     cardDict[card].FlipCard();
             };
 
+            _gameController.GameOver += (winner) =>
+            {
+                WinnerText.Text = $"{winner.PlayerColor} wins!";
+                WinOverlay.Visibility = Visibility.Visible;
+            };
+
             Grid.SetColumn(p1c, 0);
             Grid.SetColumn(bc, 1);
             Grid.SetColumn(p2c, 2);
@@ -63,6 +69,13 @@ namespace TripleTriad
             {
                 cardDict.Add(card, new CardControl(card));
             }
+        }
+
+        //Reset game
+        private void PlayAgain_Click(object sender, RoutedEventArgs e)
+        {
+            var menu = new MenuView();
+            menu.StartGame_Click(sender, e);
         }
     }
 }

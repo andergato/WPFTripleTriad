@@ -19,6 +19,7 @@ namespace TripleTriad
     public partial class GameController
     {
         public event Action<Card> CardFlipped;
+        public event Action<Player> GameOver;
 
         public Board board;
         public Player player1;
@@ -136,5 +137,27 @@ namespace TripleTriad
             return p != lastTurn ? true : false;
         }
 
+        //Checks winner if board is full
+        public void CheckWinner()
+        {
+            if (!board.CheckFull()) return;
+
+            int p1Count = 0;
+            int p2Count = 0;
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Card cell = board.GetCellState(i, j);
+                    if (cell == null) continue;
+                    if (cell.Owner == player1) p1Count++;
+                    else p2Count++;
+                }
+            }
+
+            Player winner = p1Count > p2Count ? player1 : player2;
+            GameOver?.Invoke(winner);
+        }
     }
 }
