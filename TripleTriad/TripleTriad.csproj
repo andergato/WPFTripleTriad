@@ -18,6 +18,8 @@
     <None Remove="Images\ChocoboRed.png" />
     <None Remove="Images\Demon_WallBlue.png" />
     <None Remove="Images\Demon_WallRed.png" />
+    <None Remove="Images\ExitButton.png" />
+    <None Remove="Images\Gamebackground.png" />
     <None Remove="Images\GarudaBlue.png" />
     <None Remove="Images\GarudaRed.png" />
     <None Remove="Images\IfritBlue.png" />
@@ -28,8 +30,10 @@
     <None Remove="Images\OdinBlue.png" />
     <None Remove="Images\OdinRed.png" />
     <None Remove="Images\placeholder.jpg" />
+    <None Remove="Images\playbutton.png" />
     <None Remove="Images\ShivaBlue.png" />
     <None Remove="Images\ShivaRed.png" />
+    <None Remove="Images\TitleScreen.png" />
     <None Remove="Images\Y%27shtolaBlue.png" />
     <None Remove="Images\Y%27shtolaRed.png" />
   </ItemGroup>
@@ -52,6 +56,8 @@
     <Resource Include="Images\ChocoboRed.png" />
     <Resource Include="Images\Demon_WallBlue.png" />
     <Resource Include="Images\Demon_WallRed.png" />
+    <Resource Include="Images\ExitButton.png" />
+    <Resource Include="Images\Gamebackground.png" />
     <Resource Include="Images\GarudaBlue.png" />
     <Resource Include="Images\GarudaRed.png" />
     <Resource Include="Images\IfritBlue.png" />
@@ -61,8 +67,10 @@
     <Resource Include="Images\OdinBlue.png" />
     <Resource Include="Images\OdinRed.png" />
     <Resource Include="Images\placeholder.jpg" />
+    <Resource Include="Images\playbutton.png" />
     <Resource Include="Images\ShivaBlue.png" />
     <Resource Include="Images\ShivaRed.png" />
+    <Resource Include="Images\TitleScreen.png" />
     <Resource Include="Images\Y'shtolaBlue.png" />
     <Resource Include="Images\Y'shtolaRed.png" />
   </ItemGroup>

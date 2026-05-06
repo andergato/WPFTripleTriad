@@ -24,7 +24,7 @@ namespace TripleTriad
             InitializeComponent();
 
             Player = player;
-            int leftOffset = 110;
+            int leftOffset = 15;
             int topOffset = 0;
 
             //Sets up UI for each players hand and sets up card control
@@ -41,7 +41,7 @@ namespace TripleTriad
                 Canvas.SetTop(cardControl, topOffset);
                 HandCanvas.Children.Add(cardControl);
                 //leftOffset += 140;
-                topOffset += 165;
+                topOffset += 170;
 
                 if (playerNum == 0)
                 {

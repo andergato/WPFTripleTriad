@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TripleTriad"
              mc:Ignorable="d" 
-             Width="200" Height="200"
+             Width="175" Height="175"
              MouseMove="CardControl_MouseMove">
     <Viewbox>
         <Grid>

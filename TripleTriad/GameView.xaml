@@ -13,9 +13,9 @@
     <Grid x:Name="RootGrid">
         <Grid.ColumnDefinitions>
             <!--Player 1 Cards-->
-            <ColumnDefinition Width="400" />
+            <ColumnDefinition Width="200" />
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
 
         <!-- Draggable piece lives here, to the left -->
