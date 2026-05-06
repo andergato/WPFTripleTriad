@@ -9,11 +9,62 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Blue_DragonBlue.png" />
+    <None Remove="Images\Blue_DragonRed.png" />
+    <None Remove="Images\ChimeraBlue.png" />
+    <None Remove="Images\ChimeraRed.png" />
+    <None Remove="Images\chocobo.jpg" />
+    <None Remove="Images\ChocoboBlue.png" />
+    <None Remove="Images\ChocoboRed.png" />
+    <None Remove="Images\Demon_WallBlue.png" />
+    <None Remove="Images\Demon_WallRed.png" />
+    <None Remove="Images\GarudaBlue.png" />
+    <None Remove="Images\GarudaRed.png" />
+    <None Remove="Images\IfritBlue.png" />
+    <None Remove="Images\IfritRed.png" />
+    <None Remove="Images\images\ChocoboRed.png" />
+    <None Remove="Images\MoogleBlue.png" />
+    <None Remove="Images\MoogleRed.png" />
+    <None Remove="Images\OdinBlue.png" />
+    <None Remove="Images\OdinRed.png" />
+    <None Remove="Images\placeholder.jpg" />
+    <None Remove="Images\ShivaBlue.png" />
+    <None Remove="Images\ShivaRed.png" />
+    <None Remove="Images\Y%27shtolaBlue.png" />
+    <None Remove="Images\Y%27shtolaRed.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Page Remove="Game.xaml" />
   </ItemGroup>
 
   <ItemGroup>
     <Page Include="App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Blue_DragonBlue.png" />
+    <Resource Include="Images\Blue_DragonRed.png" />
+    <Resource Include="Images\ChimeraBlue.png" />
+    <Resource Include="Images\ChimeraRed.png" />
+    <Resource Include="Images\chocobo.jpg" />
+    <Resource Include="Images\ChocoboBlue.png" />
+    <Resource Include="Images\ChocoboRed.png" />
+    <Resource Include="Images\Demon_WallBlue.png" />
+    <Resource Include="Images\Demon_WallRed.png" />
+    <Resource Include="Images\GarudaBlue.png" />
+    <Resource Include="Images\GarudaRed.png" />
+    <Resource Include="Images\IfritBlue.png" />
+    <Resource Include="Images\IfritRed.png" />
+    <Resource Include="Images\MoogleBlue.png" />
+    <Resource Include="Images\MoogleRed.png" />
+    <Resource Include="Images\OdinBlue.png" />
+    <Resource Include="Images\OdinRed.png" />
+    <Resource Include="Images\placeholder.jpg" />
+    <Resource Include="Images\ShivaBlue.png" />
+    <Resource Include="Images\ShivaRed.png" />
+    <Resource Include="Images\Y'shtolaBlue.png" />
+    <Resource Include="Images\Y'shtolaRed.png" />
   </ItemGroup>
 
   <ItemGroup>

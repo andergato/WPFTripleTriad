@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="LightPink">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Text="Triple Triad" FontSize="48" Foreground="White" Margin="0,0,0,50"/>
+            <TextBlock Text="Triple Triad" FontFamily="Wingdings" FontSize="48" Foreground="White" Margin="0,0,0,50"/>
             <Button Content="Start Game" Width="200" Height="50" Margin="10" Click="StartGame_Click"/>
             <Button Content="Exit" Width="200" Height="50" Margin="10" Click="Exit_Click"/>
         </StackPanel>

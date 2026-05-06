@@ -33,6 +33,7 @@
                 <Button Content="Play Again" Click="PlayAgain_Click" Margin="0,20,0,0"/>
             </StackPanel>
         </Border>
+            
     </Grid>
     </Grid>
 

@@ -42,30 +42,37 @@ namespace TripleTriad
         {
             if (p == player1)
             {
-                Card card1 = new Card("Chocabo", 3, 2, 1, 7, p);
-                addToHand(p, card1);
-                Card card2 = new Card("Chimera", 7, 2, 2, 7, p);
-                addToHand(p, card2);
-                Card card3 = new Card("Blue Dragon", 2, 7, 7, 2, p);
-                addToHand(p, card3);
-                Card card4 = new Card("Garuda", 7, 1, 7, 6, p);
-                addToHand(p, card4);
-                Card card5 = new Card("Shiva", 1, 8, 8, 8, p);
-                addToHand(p, card5);
+                //Card card1 = new Card("Chocabo", 3, 2, 1, 7, p);
+                //addToHand(p, card1);
+                //Card card2 = new Card("Chimera", 7, 2, 2, 7, p);
+                //addToHand(p, card2);
+                //Card card3 = new Card("Blue Dragon", 2, 7, 7, 2, p);
+                //addToHand(p, card3);
+                //Card card4 = new Card("Garuda", 7, 1, 7, 6, p);
+                //addToHand(p, card4);
+                //Card card5 = new Card("Shiva", 1, 8, 8, 8, p);
+                //addToHand(p, card5);
 
+                var allCards = CardCollection.AllCards(p);
+                var hand = allCards.Take(0..5).ToList();
+                p.Hand.AddRange(hand);
             }
             else
             {
-                Card card1 = new Card("Moogle", 2, 3, 7, 1, p);
-                addToHand(p, card1);
-                Card card2 = new Card("Demon Wall", 6, 2, 3, 7, p);
-                addToHand(p, card2);
-                Card card3 = new Card("Ifrit", 7, 6, 7, 1, p);
-                addToHand(p, card3);
-                Card card4 = new Card("Y'shtola", 7, 1, 4, 8, p);
-                addToHand(p, card4);
-                Card card5 = new Card("Odin", 8, 1, 8, 8, p);
-                addToHand(p, card5);
+                //Card card1 = new Card("Moogle", 2, 3, 7, 1, p);
+                //addToHand(p, card1);
+                //Card card2 = new Card("Demon Wall", 6, 2, 3, 7, p);
+                //addToHand(p, card2);
+                //Card card3 = new Card("Ifrit", 7, 6, 7, 1, p);
+                //addToHand(p, card3);
+                //Card card4 = new Card("Y'shtola", 7, 1, 4, 8, p);
+                //addToHand(p, card4);
+                //Card card5 = new Card("Odin", 8, 1, 8, 8, p);
+                //addToHand(p, card5);
+
+                var allCards = CardCollection.AllCards(p);
+                var hand = allCards.Take(5..10).ToList();
+                p.Hand.AddRange(hand);
             }
         }
 

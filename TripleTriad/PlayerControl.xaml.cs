@@ -24,24 +24,24 @@ namespace TripleTriad
             InitializeComponent();
 
             Player = player;
-            int leftOffset = 50;
+            int leftOffset = 110;
             int topOffset = 0;
 
             //Sets up UI for each players hand and sets up card control
             foreach (Card card in player.Hand)
             {
-                if (leftOffset >= 300)
-                {
-                    leftOffset = 50;
-                    topOffset += 110;
-                }
+                //if (leftOffset >= 300)
+                //{
+                //    leftOffset = 50;
+                //    topOffset += 150;
+                //}
 
                 CardControl cardControl = cardDict[card];
                 Canvas.SetLeft(cardControl, leftOffset);
                 Canvas.SetTop(cardControl, topOffset);
                 HandCanvas.Children.Add(cardControl);
-                leftOffset += 110;
-
+                //leftOffset += 140;
+                topOffset += 165;
 
                 if (playerNum == 0)
                 {

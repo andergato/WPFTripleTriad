@@ -84,8 +84,8 @@ namespace TripleTriad
             droppedCard.ClearValue(MarginProperty);
             droppedCard.HorizontalAlignment = HorizontalAlignment.Center;
             droppedCard.VerticalAlignment = VerticalAlignment.Center;
-            droppedCard.Width = 90;
-            droppedCard.Height = 90;
+            droppedCard.Width = 110;
+            droppedCard.Height = 110;
         }
     }
 }

@@ -25,16 +25,15 @@ namespace TripleTriad
             InitializeComponent();
             // Set up visual card components
             Card = card;
-            if (card.Owner.PlayerColor == Player.Color.Red)
-            {
-                DragCard.Fill = Brushes.Red;
-            }
-            TopNumber.Text = card.Top.ToString();
-            BottomNumber.Text = card.Bottom.ToString();
-            RightNumber.Text = card.Right.ToString();
-            LeftNumber.Text = card.Left.ToString();
-        }
+            //if (card.Owner.PlayerColor == Player.Color.Red)
+            //{
+            card.ImagePath = @$"Images/{Card.Name}{Card.Owner.PlayerColor}.png";
 
+            CardImage.Source = new BitmapImage(
+                new Uri($"pack://application:,,,/{card.ImagePath}", UriKind.Absolute)
+            );
+        }
+       
         // Allow card to be moved and dropped
         private void CardControl_MouseMove(object sender, MouseEventArgs e)
         {
@@ -47,13 +46,18 @@ namespace TripleTriad
         //Change card's UI color based on backend 
         public void FlipCard()
         {
-            if(Card.Owner.PlayerColor == Player.Color.Red){
-                DragCard.Fill = Brushes.Red;
-            }
-            else
-            {
-                DragCard.Fill = Brushes.Blue;
-            }
+            //if (Card.Owner.PlayerColor == Player.Color.Red)
+            //{
+            //    Card.ImagePath = $"{Card.Name}{Card.Owner.PlayerColor}.jpg";
+            //}
+            //else
+            //{
+            //    DragCard.Fill = Brushes.Blue;
+            //}
+            Card.ImagePath = $"Images/{Card.Name}{Card.Owner.PlayerColor}.png";
+            CardImage.Source = new BitmapImage(
+    new Uri($"pack://application:,,,/{Card.ImagePath}", UriKind.Absolute)
+);
         }
     }
 }
