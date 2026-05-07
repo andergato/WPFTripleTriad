@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -25,7 +26,7 @@ namespace TripleTriad
         public Player player1;
         public Player player2;
         public Player lastTurn; // Last player who took a turn
-
+        static List<Card> allCards;
         //Initalize all game elements (board, players, cards)
         public GameController()
         {
@@ -40,8 +41,8 @@ namespace TripleTriad
         //Load playable cards into players' hands
         private void LoadCards(Player p)
         {
-            if (p == player1)
-            {
+            //if (p == player1)
+            //{
                 //Card card1 = new Card("Chocabo", 3, 2, 1, 7, p);
                 //addToHand(p, card1);
                 //Card card2 = new Card("Chimera", 7, 2, 2, 7, p);
@@ -52,28 +53,51 @@ namespace TripleTriad
                 //addToHand(p, card4);
                 //Card card5 = new Card("Shiva", 1, 8, 8, 8, p);
                 //addToHand(p, card5);
+                var random = new Random();
+                allCards = CardCollection.AllCards(p);
+                List<Card> hand = new List<Card>();
 
-                var allCards = CardCollection.AllCards(p);
-                var hand = allCards.Take(0..5).ToList();
-                p.Hand.AddRange(hand);
-            }
-            else
-            {
-                //Card card1 = new Card("Moogle", 2, 3, 7, 1, p);
-                //addToHand(p, card1);
-                //Card card2 = new Card("Demon Wall", 6, 2, 3, 7, p);
-                //addToHand(p, card2);
-                //Card card3 = new Card("Ifrit", 7, 6, 7, 1, p);
-                //addToHand(p, card3);
-                //Card card4 = new Card("Y'shtola", 7, 1, 4, 8, p);
-                //addToHand(p, card4);
-                //Card card5 = new Card("Odin", 8, 1, 8, 8, p);
-                //addToHand(p, card5);
+                for(int i = 1; i < 5; i++)
+                {
+                    var filteredItems = allCards.Where(x => x.Stars == i).ToList();
+                    if (filteredItems.Any())
+                    {
+                        var result = filteredItems[random.Next(filteredItems.Count)];
+                        hand.Add(result);
+                    allCards.Remove(result);
+                    }
+                    if(i == 2)
+                    {
+                        filteredItems = allCards.Where(x => x.Stars == i).ToList();
+                        if (filteredItems.Any())
+                        {
+                            var result = filteredItems[random.Next(filteredItems.Count)];
+                            hand.Add(result);
+                            allCards.Remove(result);
+                        }
+                    }
+                }
 
-                var allCards = CardCollection.AllCards(p);
-                var hand = allCards.Take(5..10).ToList();
-                p.Hand.AddRange(hand);
-            }
+            //var hand = allCards.Take(0..5).ToList();
+            p.Hand.AddRange(hand);
+            //}
+            //else
+            //{
+            //    //Card card1 = new Card("Moogle", 2, 3, 7, 1, p);
+            //    //addToHand(p, card1);
+            //    //Card card2 = new Card("Demon Wall", 6, 2, 3, 7, p);
+            //    //addToHand(p, card2);
+            //    //Card card3 = new Card("Ifrit", 7, 6, 7, 1, p);
+            //    //addToHand(p, card3);
+            //    //Card card4 = new Card("Y'shtola", 7, 1, 4, 8, p);
+            //    //addToHand(p, card4);
+            //    //Card card5 = new Card("Odin", 8, 1, 8, 8, p);
+            //    //addToHand(p, card5);
+
+            //    var allCards = CardCollection.AllCards(p);
+            //    var hand = allCards.Take(5..10).ToList();
+            //    p.Hand.AddRange(hand);
+            //}
         }
 
         //Add new card to player's hand

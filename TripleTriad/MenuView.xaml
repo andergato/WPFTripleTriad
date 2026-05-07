@@ -10,7 +10,7 @@
     <Grid >
         <Image Source="/Images/TitleScreen.png" />
 
-        <StackPanel Width="252" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,180,350">
+        <StackPanel Width="252" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,125,325">
 
             <Button Background="Transparent" Click="StartGame_Click" BorderBrush="Transparent">
                 <Image Source="/Images/playbutton.png" />

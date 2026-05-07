@@ -30,17 +30,11 @@ namespace TripleTriad
             //Sets up UI for each players hand and sets up card control
             foreach (Card card in player.Hand)
             {
-                //if (leftOffset >= 300)
-                //{
-                //    leftOffset = 50;
-                //    topOffset += 150;
-                //}
-
                 CardControl cardControl = cardDict[card];
                 Canvas.SetLeft(cardControl, leftOffset);
                 Canvas.SetTop(cardControl, topOffset);
                 HandCanvas.Children.Add(cardControl);
-                //leftOffset += 140;
+
                 topOffset += 170;
 
                 if (playerNum == 0)
