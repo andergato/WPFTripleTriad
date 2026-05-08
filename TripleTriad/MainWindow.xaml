@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TripleTriad"
         mc:Ignorable="d"
         ResizeMode ="NoResize"
-        Title="Triple Triad" Height="900" Width="1200">
+        Title="Triple Triad" Height="900" Width="1200" Icon="/Images/chocobo.jpg">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Images/Gamebackground.png" 

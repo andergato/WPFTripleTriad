@@ -27,7 +27,8 @@ namespace TripleTriad
             Card = card;
             //if (card.Owner.PlayerColor == Player.Color.Red)
             //{
-            card.ImagePath = @$"Images/{Card.Name}{Card.Owner.PlayerColor}.png";
+            string colorName = Card.Owner.PlayerColor.ToString();
+            card.ImagePath = @$"Images/Cards/{colorName}Cards/{Card.Name}{colorName}.png";
 
             CardImage.Source = new BitmapImage(
                 new Uri($"pack://application:,,,/{card.ImagePath}", UriKind.Absolute)
@@ -54,10 +55,12 @@ namespace TripleTriad
             //{
             //    DragCard.Fill = Brushes.Blue;
             //}
-            Card.ImagePath = $"Images/{Card.Name}{Card.Owner.PlayerColor}.png";
+            string colorName = Card.Owner.PlayerColor.ToString();
+            Card.ImagePath = @$"Images/Cards/{colorName}Cards/{Card.Name}{colorName}.png";
+
             CardImage.Source = new BitmapImage(
-    new Uri($"pack://application:,,,/{Card.ImagePath}", UriKind.Absolute)
-);
+                new Uri($"pack://application:,,,/{Card.ImagePath}", UriKind.Absolute)
+            );
         }
     }
 }
