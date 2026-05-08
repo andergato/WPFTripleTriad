@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\ander\\Documents\\Programming\\CSharp\\TripleTriadProject\\TripleTriad\\WPFTripleTriad\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EE47005C-B154-2334-CCA5-42796A21F2F8}|TripleTriad\\TripleTriad.csproj|c:\\users\\ander\\documents\\programming\\csharp\\tripletriadproject\\tripletriad\\wpftripletriad\\tripletriad\\gameview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EE47005C-B154-2334-CCA5-42796A21F2F8}|TripleTriad\\TripleTriad.csproj|solutionrelative:tripletriad\\gameview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE47005C-B154-2334-CCA5-42796A21F2F8}|TripleTriad\\TripleTriad.csproj|c:\\users\\ander\\documents\\programming\\csharp\\tripletriadproject\\tripletriad\\wpftripletriad\\tripletriad\\playercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE47005C-B154-2334-CCA5-42796A21F2F8}|TripleTriad\\TripleTriad.csproj|solutionrelative:tripletriad\\playercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE47005C-B154-2334-CCA5-42796A21F2F8}|TripleTriad\\TripleTriad.csproj|c:\\users\\ander\\documents\\programming\\csharp\\tripletriadproject\\tripletriad\\wpftripletriad\\tripletriad\\gameview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE47005C-B154-2334-CCA5-42796A21F2F8}|TripleTriad\\TripleTriad.csproj|solutionrelative:tripletriad\\gameview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EE47005C-B154-2334-CCA5-42796A21F2F8}|TripleTriad\\TripleTriad.csproj|c:\\users\\ander\\documents\\programming\\csharp\\tripletriadproject\\tripletriad\\wpftripletriad\\tripletriad\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE47005C-B154-2334-CCA5-42796A21F2F8}|TripleTriad\\TripleTriad.csproj|solutionrelative:tripletriad\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,8 +31,8 @@
       "RelativeMoniker": "D:0:0:{EE47005C-B154-2334-CCA5-42796A21F2F8}|TripleTriad\\TripleTriad.csproj|solutionrelative:tripletriad\\cardcollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE47005C-B154-2334-CCA5-42796A21F2F8}|TripleTriad\\TripleTriad.csproj|c:\\users\\ander\\documents\\programming\\csharp\\tripletriadproject\\tripletriad\\wpftripletriad\\tripletriad\\playercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE47005C-B154-2334-CCA5-42796A21F2F8}|TripleTriad\\TripleTriad.csproj|solutionrelative:tripletriad\\playercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE47005C-B154-2334-CCA5-42796A21F2F8}|TripleTriad\\TripleTriad.csproj|c:\\users\\ander\\documents\\programming\\csharp\\tripletriadproject\\tripletriad\\wpftripletriad\\tripletriad\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EE47005C-B154-2334-CCA5-42796A21F2F8}|TripleTriad\\TripleTriad.csproj|solutionrelative:tripletriad\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "PlayerControl.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ander\\Documents\\Programming\\CSharp\\TripleTriadProject\\TripleTriad\\WPFTripleTriad\\TripleTriad\\PlayerControl.xaml.cs",
               "RelativeDocumentMoniker": "TripleTriad\\PlayerControl.xaml.cs",
@@ -43,11 +55,49 @@
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-07T21:28:36.975Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\ander\\Documents\\Programming\\CSharp\\TripleTriadProject\\TripleTriad\\WPFTripleTriad\\TripleTriad\\App.xaml",
+              "RelativeDocumentMoniker": "TripleTriad\\App.xaml",
+              "ToolTip": "C:\\Users\\ander\\Documents\\Programming\\CSharp\\TripleTriadProject\\TripleTriad\\WPFTripleTriad\\TripleTriad\\App.xaml",
+              "RelativeToolTip": "TripleTriad\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-08T14:49:58.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ander\\Documents\\Programming\\CSharp\\TripleTriadProject\\TripleTriad\\WPFTripleTriad\\TripleTriad\\GameView.xaml.cs",
+              "RelativeDocumentMoniker": "TripleTriad\\GameView.xaml.cs",
+              "ToolTip": "C:\\Users\\ander\\Documents\\Programming\\CSharp\\TripleTriadProject\\TripleTriad\\WPFTripleTriad\\TripleTriad\\GameView.xaml.cs",
+              "RelativeToolTip": "TripleTriad\\GameView.xaml.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAcwFMAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-08T14:25:46.253Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "GameView.xaml",
+              "DocumentMoniker": "C:\\Users\\ander\\Documents\\Programming\\CSharp\\TripleTriadProject\\TripleTriad\\WPFTripleTriad\\TripleTriad\\GameView.xaml",
+              "RelativeDocumentMoniker": "TripleTriad\\GameView.xaml",
+              "ToolTip": "C:\\Users\\ander\\Documents\\Programming\\CSharp\\TripleTriadProject\\TripleTriad\\WPFTripleTriad\\TripleTriad\\GameView.xaml",
+              "RelativeToolTip": "TripleTriad\\GameView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-08T14:23:06.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "GameController.cs",
               "DocumentMoniker": "C:\\Users\\ander\\Documents\\Programming\\CSharp\\TripleTriadProject\\TripleTriad\\WPFTripleTriad\\TripleTriad\\GameController.cs",
               "RelativeDocumentMoniker": "TripleTriad\\GameController.cs",
@@ -55,24 +105,22 @@
               "RelativeToolTip": "TripleTriad\\GameController.cs",
               "ViewState": "AgIAAHQAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T02:00:51.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-08T02:00:51.186Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\ander\\Documents\\Programming\\CSharp\\TripleTriadProject\\TripleTriad\\WPFTripleTriad\\TripleTriad\\MainWindow.xaml",
               "RelativeDocumentMoniker": "TripleTriad\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\ander\\Documents\\Programming\\CSharp\\TripleTriadProject\\TripleTriad\\WPFTripleTriad\\TripleTriad\\MainWindow.xaml",
               "RelativeToolTip": "TripleTriad\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-07T22:16:05.215Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T22:16:05.215Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Card.cs",
               "DocumentMoniker": "C:\\Users\\ander\\Documents\\Programming\\CSharp\\TripleTriadProject\\TripleTriad\\WPFTripleTriad\\TripleTriad\\Card.cs",
               "RelativeDocumentMoniker": "TripleTriad\\Card.cs",
@@ -80,12 +128,11 @@
               "RelativeToolTip": "TripleTriad\\Card.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T21:44:30.365Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T21:44:30.365Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "CardCollection.cs",
               "DocumentMoniker": "C:\\Users\\ander\\Documents\\Programming\\CSharp\\TripleTriadProject\\TripleTriad\\WPFTripleTriad\\TripleTriad\\CardCollection.cs",
               "RelativeDocumentMoniker": "TripleTriad\\CardCollection.cs",
@@ -93,8 +140,7 @@
               "RelativeToolTip": "TripleTriad\\CardCollection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T21:22:54.098Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-07T21:22:54.098Z"
             }
           ]
         }

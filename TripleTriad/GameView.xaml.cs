@@ -49,6 +49,7 @@ namespace TripleTriad
 
             _gameController.GameOver += (winner) =>
             {
+                Grid.SetColumn(WinOverlay, 1);
                 WinnerText.Text = $"{winner.PlayerColor} wins!";
                 WinOverlay.Visibility = Visibility.Visible;
             };
@@ -76,6 +77,11 @@ namespace TripleTriad
         {
             var menu = new MenuView();
             menu.StartGame_Click(sender, e);
+        }
+
+        private void Continue_Click(object sender, RoutedEventArgs e)
+        {
+            RulesPage.Visibility = Visibility.Collapsed;
         }
     }
 }
