@@ -12,7 +12,7 @@ using System.Windows.Shapes;
 namespace TripleTriad
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainWindow.xaml. The window that contains every view. Upon start opens menu view. 
     /// </summary>
     public partial class MainWindow : Window
     {

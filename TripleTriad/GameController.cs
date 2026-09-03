@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace TripleTriad
 {
     /// <summary>
-    /// Interaction logic for GameController.xaml
+    /// Interaction logic for GameController.xaml. Houses logic for game as a whole: Loads cards for players, plays cards, and checks for winners. 
     /// </summary>
     public partial class GameController
     {
@@ -27,6 +27,7 @@ namespace TripleTriad
         public Player player2;
         public Player lastTurn; // Last player who took a turn
         static List<Card> allCards;
+
         //Initalize all game elements (board, players, cards)
         public GameController()
         {
@@ -41,18 +42,6 @@ namespace TripleTriad
         //Load playable cards into players' hands
         private void LoadCards(Player p)
         {
-            //if (p == player1)
-            //{
-                //Card card1 = new Card("Chocabo", 3, 2, 1, 7, p);
-                //addToHand(p, card1);
-                //Card card2 = new Card("Chimera", 7, 2, 2, 7, p);
-                //addToHand(p, card2);
-                //Card card3 = new Card("Blue Dragon", 2, 7, 7, 2, p);
-                //addToHand(p, card3);
-                //Card card4 = new Card("Garuda", 7, 1, 7, 6, p);
-                //addToHand(p, card4);
-                //Card card5 = new Card("Shiva", 1, 8, 8, 8, p);
-                //addToHand(p, card5);
                 var random = new Random();
                 allCards = CardCollection.AllCards(p);
                 List<Card> hand = new List<Card>();
@@ -77,36 +66,10 @@ namespace TripleTriad
                         }
                     }
                 }
-
-            //var hand = allCards.Take(0..5).ToList();
             p.Hand.AddRange(hand);
-            //}
-            //else
-            //{
-            //    //Card card1 = new Card("Moogle", 2, 3, 7, 1, p);
-            //    //addToHand(p, card1);
-            //    //Card card2 = new Card("Demon Wall", 6, 2, 3, 7, p);
-            //    //addToHand(p, card2);
-            //    //Card card3 = new Card("Ifrit", 7, 6, 7, 1, p);
-            //    //addToHand(p, card3);
-            //    //Card card4 = new Card("Y'shtola", 7, 1, 4, 8, p);
-            //    //addToHand(p, card4);
-            //    //Card card5 = new Card("Odin", 8, 1, 8, 8, p);
-            //    //addToHand(p, card5);
-
-            //    var allCards = CardCollection.AllCards(p);
-            //    var hand = allCards.Take(5..10).ToList();
-            //    p.Hand.AddRange(hand);
-            //}
         }
 
-        //Add new card to player's hand
-        public void addToHand(Player p, Card c)
-        {
-            p.Hand.Add(c);
-        }
-
-        //Handles border checking when a card is played 
+        //**Handles border checking when a card is played 
         public void PlayCard(int row, int col, Card droppedCard)
         {
             Card? topAdj = null;
@@ -140,19 +103,19 @@ namespace TripleTriad
                 cardFlipped = leftAdj;
             }
 
-            if ((rightAdj is not null) && (rightAdj.Left < card.Right))
-            {
-                rightAdj.FlipOwner(card.Owner, rightAdj.Owner);
-                cardFlipped = rightAdj;
-            }
-
-            if ((bottomAdj is not null) && (bottomAdj.Top < card.Bottom))
+            else if ((bottomAdj is not null) && (bottomAdj.Top < card.Bottom))
             {
                 bottomAdj.FlipOwner(card.Owner, bottomAdj.Owner);
                 cardFlipped = bottomAdj;
             }
 
-            if ((topAdj is not null) && (topAdj.Bottom < card.Top))
+            else if ((rightAdj is not null) && (rightAdj.Left < card.Right))
+            {
+                rightAdj.FlipOwner(card.Owner, rightAdj.Owner);
+                cardFlipped = rightAdj;
+            }
+
+            else if ((topAdj is not null) && (topAdj.Bottom < card.Top))
             {
                 topAdj.FlipOwner(card.Owner, topAdj.Owner);
                 cardFlipped = topAdj;
@@ -186,8 +149,16 @@ namespace TripleTriad
                     else p2Count++;
                 }
             }
+            Player winner = new Player(Player.Color.Purple);
+            if(p1Count > p2Count)
+            {
+                winner = player1;
+            }
+            else if(p2Count > p1Count)
+            {
+                winner = player2;
+            }
 
-            Player winner = p1Count > p2Count ? player1 : player2;
             GameOver?.Invoke(winner);
         }
     }

@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 namespace TripleTriad
 {
     /// <summary>
-    /// Interaction logic for PlayerControl.xaml
+    /// Interaction logic for PlayerControl.xaml. Sets up each player's cards and playspace.
     /// </summary>
     public partial class PlayerControl : UserControl
     {
@@ -47,17 +47,6 @@ namespace TripleTriad
                 }
             }
 
-        }
-
-        //Changes owner of a card
-        public void FlipOwner(Board board, CardControl c, Player player2)
-        {
-            Card card = c.Card;
-
-            Player.Hand.Remove(card);
-            player2.Hand.Add(card);
-
-            c.FlipCard();
         }
 }
 }

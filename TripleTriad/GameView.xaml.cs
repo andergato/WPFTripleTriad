@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Numerics;
 using System.Text;
 using System.Windows;
@@ -16,12 +17,11 @@ using System.Windows.Shapes;
 namespace TripleTriad
 {
     /// <summary>
-    /// Interaction logic for GameView.xaml
+    /// Interaction logic for GameView.xaml. Houses the UI Interaction for starting a game, the game menus, and game events. 
     /// </summary>
     public partial class GameView
     {
         private GameController _gameController;
-        private CardControl _cardControl;
         public Dictionary<Card, CardControl> cardDict = new Dictionary<Card, CardControl>();
 
         public GameView()
@@ -31,7 +31,7 @@ namespace TripleTriad
             LoadGame();
         }
 
-        //Loads board and adds it to game view
+        //Loads board and adds it to game view. Houses event handlers for cards being flipped and the game being over. 
         private void LoadGame()
         {
             loadCards(_gameController.player1);
@@ -50,9 +50,18 @@ namespace TripleTriad
             _gameController.GameOver += (winner) =>
             {
                 Grid.SetColumn(WinOverlay, 1);
-                WinnerText.Text = $"{winner.PlayerColor} wins!";
+                if (winner.PlayerColor == Player.Color.Purple)
+                {
+                    WinnerText.Text = $"Draw";
+                }
+                else
+                {
+                   WinnerText.Text = $"{winner.PlayerColor} wins!";
+                }
+               
                 WinOverlay.Visibility = Visibility.Visible;
             };
+
 
             Grid.SetColumn(p1c, 0);
             Grid.SetColumn(bc, 1);
@@ -63,7 +72,7 @@ namespace TripleTriad
             RootGrid.Children.Add(p2c);
         }
 
-        //Load up card dictionary
+        //Loads up card dictionary
         private void loadCards(Player player)
         {
             foreach (Card card in player.Hand)
@@ -72,16 +81,25 @@ namespace TripleTriad
             }
         }
 
-        //Reset game
+        //Resets game
         private void PlayAgain_Click(object sender, RoutedEventArgs e)
         {
             var menu = new MenuView();
             menu.StartGame_Click(sender, e);
         }
 
+        //Hides tutorial panel
         private void Continue_Click(object sender, RoutedEventArgs e)
         {
             RulesPage.Visibility = Visibility.Collapsed;
+        }
+
+        //Creates new menuview and sends user back to menu
+        private void Menu_Click(object sender, RoutedEventArgs e)
+        {
+            var mainWindow = (MainWindow)Application.Current.MainWindow;
+
+            mainWindow.MainContent.Content = new MenuView();
         }
     }
 }

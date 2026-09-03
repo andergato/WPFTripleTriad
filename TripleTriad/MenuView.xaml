@@ -15,12 +15,12 @@
             <Button Background="Transparent" Click="StartGame_Click" BorderBrush="Transparent">
                 <Image Source="/Images/playbutton.png" />
             </Button>
-            <Button Background="Transparent" Click="StartGame_Click" BorderBrush="Transparent">
+            <Button Background="Transparent" Click="Exit_Click" BorderBrush="Transparent">
                 <Image Source="/Images/ExitButton.png" />
             </Button>
-
-        </StackPanel>
         
+        </StackPanel>
+        <TextBlock Text="Created by Samantha Friedman" FontFamily="Neo Sans" FontSize="20px" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,25,10"/>
 
     </Grid>
 </UserControl>

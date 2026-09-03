@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TripleTriad")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+69acf6dbb0ef5fe400c0f41bc87301c4935ad20e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0c733d8a5f9384749ac14a695fabd26e88e6d79")]
 [assembly: System.Reflection.AssemblyProductAttribute("TripleTriad")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TripleTriad")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

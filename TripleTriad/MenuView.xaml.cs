@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace TripleTriad
 {
     /// <summary>
-    /// Interaction logic for MenuView.xaml
+    /// Interaction logic for MenuView.xaml. Houses the UI interaction logic for the menu. 
     /// </summary>
     public partial class MenuView
     {
         public MenuView()
         {
             InitializeComponent();
-            
         }
 
         // Starts game
@@ -31,7 +30,6 @@ namespace TripleTriad
         {
             // Access the MainWindow and change its content to the GameView
             var mainWindow = (MainWindow)Application.Current.MainWindow;
-
             mainWindow.MainContent.Content = new GameView();
         }
 

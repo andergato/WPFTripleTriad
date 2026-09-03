@@ -11,10 +11,6 @@ namespace TripleTriad
 {
     public class Card
     {
-        //private string name;
-        //private BitmapImage icon;
-        //private Image image;
-
         public int Top { get; private set; }
         public int Bottom { get; private set; }
         public int Left { get; private set; }
@@ -35,8 +31,6 @@ namespace TripleTriad
             Owner = owner;
             ImagePath = imagePath;
         }
-
-
 
         public Player FlipOwner(Player p1, Player p2)
         {

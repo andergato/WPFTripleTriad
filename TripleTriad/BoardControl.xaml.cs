@@ -10,11 +10,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace TripleTriad
 {
     /// <summary>
-    /// Interaction logic for BoardControl.xaml
+    /// Interaction logic for BoardControl.xaml. Handles logic with board and each card's interaction with it. 
     /// </summary>
     public partial class BoardControl : UserControl
     {
@@ -29,14 +30,15 @@ namespace TripleTriad
             _GameController = gc;
         }
 
+        // **Drops a card from the canvas onto the board
         public void Border_Drop(object sender, DragEventArgs e)
         {
             // Check if the card is dropped on the board and if spot is not already taken
             var targetBorder = sender as Border;
             if (targetBorder == null || targetBorder.Child != null) return;
 
-            //// Check the payload is actually a card
-            if ((CardControl)e.Data.GetData(typeof(CardControl)) is not CardControl droppedCard || !_GameController.checkTurn(droppedCard.Card.Owner)) return;
+            //// Check the payload is actually a card, it is the player's turn, and it is not a card already on the board being moved
+            if ((CardControl)e.Data.GetData(typeof(CardControl)) is not CardControl droppedCard || !_GameController.checkTurn(droppedCard.Card.Owner) || LogicalTreeHelper.GetParent(droppedCard).ToString() != "System.Windows.Controls.Canvas") return;
 
             // Remove circle from its current parent
             RemoveFromParent(droppedCard);
@@ -48,8 +50,6 @@ namespace TripleTriad
 
             //Let board object know where each item is
             Board.SetCellState(Grid.GetRow(targetBorder), Grid.GetColumn(targetBorder), droppedCard.Card);
-
-            //checkAdjacent(targetBorder, Board, droppedCard);
 
             int row = Grid.GetRow(targetBorder);
             int col = Grid.GetColumn(targetBorder);

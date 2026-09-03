@@ -9,14 +9,15 @@ namespace TripleTriad
         public enum Color
         {
             Red,
-            Blue
+            Blue,
+            Purple
         }
         public List<Card> Hand { get; set; } = new List<Card>();
 
         public Player.Color PlayerColor { get; set; }
 
         public Player(Player.Color pc)
-        {
+        { 
             PlayerColor = pc;
         }       
     }

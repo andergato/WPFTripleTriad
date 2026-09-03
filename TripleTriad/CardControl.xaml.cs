@@ -14,7 +14,7 @@ using System.Windows.Shapes;
 namespace TripleTriad
 {
     /// <summary>
-    /// Interaction logic for CardControl.xaml
+    /// Interaction logic for CardControl.xaml. Handles UI Interaction logic for cards such as moving them and changing their color when flipped.
     /// </summary>
     public partial class CardControl : UserControl
     {
@@ -25,8 +25,6 @@ namespace TripleTriad
             InitializeComponent();
             // Set up visual card components
             Card = card;
-            //if (card.Owner.PlayerColor == Player.Color.Red)
-            //{
             string colorName = Card.Owner.PlayerColor.ToString();
             card.ImagePath = @$"Images/Cards/{colorName}Cards/{Card.Name}{colorName}.png";
 
@@ -47,14 +45,6 @@ namespace TripleTriad
         //Change card's UI color based on backend 
         public void FlipCard()
         {
-            //if (Card.Owner.PlayerColor == Player.Color.Red)
-            //{
-            //    Card.ImagePath = $"{Card.Name}{Card.Owner.PlayerColor}.jpg";
-            //}
-            //else
-            //{
-            //    DragCard.Fill = Brushes.Blue;
-            //}
             string colorName = Card.Owner.PlayerColor.ToString();
             Card.ImagePath = @$"Images/Cards/{colorName}Cards/{Card.Name}{colorName}.png";
 
