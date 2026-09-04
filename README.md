@@ -1,4 +1,4 @@
-# WPFTripleTriad
+# WPF Triple Triad
 
 A C#/WPF implementation of the Triple Triad card game from the Final Fantasy series. 
 
